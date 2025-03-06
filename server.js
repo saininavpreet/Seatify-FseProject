@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 // Fetch all users
 app.get("/users", (req, res) => {
-  connection.query("SELECT * FROM Users", (err, results) =>  {
+  connection.query("SELECT id, name, email, phone, role, created_at FROM Users", (err, results) =>  {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
