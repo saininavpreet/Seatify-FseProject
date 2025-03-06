@@ -56,7 +56,7 @@ CREATE TABLE Show_Seats (
     FOREIGN KEY (show_id) REFERENCES Shows(id) ON DELETE CASCADE
 );
 
-CREATE TABLE Bookings (
+CREATE TABLE Bookings ( //table of booking
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT, -- Customer booking the ticket
     show_id INT, -- Show for which ticket is booked
@@ -67,10 +67,13 @@ CREATE TABLE Bookings (
     FOREIGN KEY (show_id) REFERENCES Shows(id) ON DELETE CASCADE
 );
 
-CREATE TABLE Booking_Seats (
+CREATE TABLE Booking_Seats ( //seat table
     id INT PRIMARY KEY AUTO_INCREMENT,
     booking_id INT, -- Booking reference
     seat_id INT, -- Seat booked
     FOREIGN KEY (booking_id) REFERENCES Bookings(id) ON DELETE CASCADE,
     FOREIGN KEY (seat_id) REFERENCES Show_Seats(id) ON DELETE CASCADE
 );
+
+
+
