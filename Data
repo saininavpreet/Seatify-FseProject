@@ -1,0 +1,84 @@
+use seatify
+INSERT INTO Users (name, email, password, phone, role) VALUES
+('Amit Sharma', 'amit.sharma@example.com', 'hashedpass123', '9876543210', 'customer'),
+('Priya Verma', 'priya.verma@example.com', 'securepass456', '9876543211', 'customer'),
+('Rahul Mehta', 'rahul.mehta@example.com', 'rahulpass789', '9876543212', 'customer'),
+('Sneha Iyer', 'sneha.iyer@example.com', 'sneha1234', '9876543213', 'customer'),
+('Rajesh Gupta', 'rajesh.gupta@example.com', 'adminpass999', '9876543214', 'admin');
+
+show tables;
+select * from users
+
+INSERT INTO Movies (title, description, duration, language, genre, release_date) VALUES
+('3 Idiots', 'A story of friendship and education.', 170, 'Hindi', 'Comedy, Drama', '2009-12-25'),
+('Baahubali: The Beginning', 'A historical action film.', 159, 'Telugu', 'Action, Drama', '2015-07-10'),
+('Gully Boy', 'A journey of a street rapper.', 153, 'Hindi', 'Drama, Musical', '2019-02-14'),
+('KGF: Chapter 1', 'A story of power and gold mines.', 156, 'Kannada', 'Action, Thriller', '2018-12-21'),
+('Drishyam', 'A thrilling family drama.', 163, 'Malayalam', 'Thriller, Mystery', '2013-12-19');
+
+INSERT INTO Cinemas (name, location) VALUES
+('PVR Phoenix', 'Mumbai'),
+('INOX Forum Mall', 'Bangalore'),
+('Cinepolis Ambience', 'Delhi'),
+('PVR Lulu Mall', 'Kochi'),
+('INOX Nexus Mall', 'Hyderabad');
+
+INSERT INTO Cinema_Halls (cinema_id, hall_name, total_seats) VALUES
+(1, 'Screen 1', 120),
+(1, 'Screen 2', 100),
+(2, 'Screen 3', 80),
+(3, 'Screen 4', 150),
+(4, 'Screen 5', 200),
+(5, 'Screen 6', 180);
+
+INSERT INTO Shows (movie_id, cinema_hall_id, show_time, ticket_price) VALUES
+(1, 1, '2025-03-05 18:30:00', 250.00),
+(2, 2, '2025-03-06 20:00:00', 350.00),
+(3, 3, '2025-03-07 15:00:00', 220.00),
+(4, 4, '2025-03-07 18:45:00', 280.00),
+(5, 5, '2025-03-08 21:00:00', 300.00);
+
+INSERT INTO Show_Seats (show_id, seat_number, seat_type, is_booked) VALUES
+-- Show 1 (3 Idiots)
+(1, 'A1', 'Regular', FALSE),
+(1, 'A2', 'Regular', TRUE),
+(1, 'B1', 'Premium', FALSE),
+(1, 'B2', 'Premium', TRUE),
+
+-- Show 2 (Baahubali)
+(2, 'C1', 'VIP', FALSE),
+(2, 'C2', 'VIP', TRUE),
+(2, 'D1', 'Regular', TRUE),
+(2, 'D2', 'Regular', FALSE),
+
+-- Show 3 (Gully Boy)
+(3, 'E1', 'Premium', FALSE),
+(3, 'E2', 'Premium', TRUE),
+(3, 'F1', 'VIP', FALSE),
+(3, 'F2', 'VIP', TRUE);
+
+
+INSERT INTO Bookings (user_id, show_id, total_price, booking_status) VALUES
+(1, 1, 500.00, 'confirmed'),
+(2, 2, 700.00, 'confirmed'),
+(3, 3, 440.00, 'confirmed'),
+(4, 4, 280.00, 'cancelled'),
+(5, 5, 600.00, 'confirmed');
+
+INSERT INTO Booking_Seats (booking_id, seat_id) VALUES
+(1, 2),  -- Priya booked A2
+(1, 4),  -- Priya booked B2
+(2, 6),  -- Rahul booked C2
+(2, 7),  -- Rahul booked D1
+(3, 10), -- Sneha booked E2
+(3, 12), -- Sneha booked F2
+(5, 9);  -- Rajesh booked F1
+
+SELECT * FROM Users;
+SELECT * FROM Movies;
+SELECT * FROM Cinemas;
+SELECT * FROM Cinema_Halls;
+SELECT * FROM Shows;
+SELECT * FROM Show_Seats;
+SELECT * FROM Bookings;
+SELECT * FROM Booking_Seats;
