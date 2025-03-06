@@ -20,7 +20,7 @@ INSERT INTO Cinemas (name, location) VALUES
 ('PVR Phoenix', 'Mumbai'),
 ('INOX Forum Mall', 'Bangalore'),
 ('Cinepolis Ambience', 'Delhi'),
-('PVR Lulu Mall', 'Kochi'),
+('PVR Mall', 'Kochi'),
 ('INOX Nexus Mall', 'Hyderabad');
 
 INSERT INTO Cinema_Halls (cinema_id, hall_name, total_seats) VALUES
