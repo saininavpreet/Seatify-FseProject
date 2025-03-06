@@ -91,7 +91,7 @@ app.post("/", (req, res) => {
   );
 });
 
-// Delete a booking
+// Delete a Booking
 app.delete("/:id", (req, res) => {
   let id = req.params.id;
   connection.query("DELETE FROM Bookings WHERE id = ?", [id], (err, result) => {
