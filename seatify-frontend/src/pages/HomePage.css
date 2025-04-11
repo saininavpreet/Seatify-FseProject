@@ -1,0 +1,17 @@
+.homepage {
+    padding: 20px;
+  }
+  
+  .homepage-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  

@@ -1,0 +1,27 @@
+.movie-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .movie-title {
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
